@@ -114,7 +114,7 @@ public class Main {
     private void hitung3D(){
         do {
             System.out.println("Aplikasi Penghitung Volume Bangun Ruang");
-            System.out.println("1. Kubus\n2. Balok\n3. Tabung\n4. Bola\n0. Kembali");
+            System.out.println("1. Kubus\n2. Balok\n3. Tabung\n4. Bola\n5. Kerucut\n0. Kembali");
             System.out.print("Pilih bangun ruang yang ingin di hitung : ");
             pilihMenu = in.nextInt();
             switch (pilihMenu) {
@@ -144,6 +144,13 @@ public class Main {
                     Bola ball = new Bola();
                     ball.inputData("Jari - jari"); ball.setJarijari(in.nextDouble());
                     ball.hitungVolume(isBangun);
+                }
+                case 5 -> {
+                    isBangun = "Kerucut";
+                    Kerucut kr = new Kerucut();
+                    kr.inputData("Jari - jari"); kr.setJarijari(in.nextDouble());
+                    kr.inputData("Tinggi"); kr.setTinggi(in.nextDouble());
+                    kr.hitungVolume(isBangun);
                 }
                 case 0 -> MainMenu();
             }

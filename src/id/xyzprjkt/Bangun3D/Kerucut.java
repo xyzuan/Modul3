@@ -16,13 +16,12 @@
 
 package id.xyzprjkt.Bangun3D;
 
-public class Tabung extends id.xyzprjkt.LKVBangun.VBangun3D{
-    private double jarijari;
-    private double tinggi;
+public class Kerucut extends id.xyzprjkt.LKVBangun.VBangun3D{
+    private double jarijari, tinggi;
 
     @Override
     public void hitungVolume(String Bangun) {
-        this.setVolume(Math.PI * getJarijari() * getJarijari() * getTinggi());
+        this.setVolume(( 1.0 / 3.0 ) * Math.PI * Math.pow(getJarijari(), 2) * getTinggi());
         super.hitungVolume(Bangun);
     }
 

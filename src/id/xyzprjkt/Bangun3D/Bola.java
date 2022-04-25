@@ -21,7 +21,7 @@ public class Bola extends id.xyzprjkt.LKVBangun.VBangun3D{
 
     @Override
     public void hitungVolume(String Bangun) {
-        this.setVolume( ( 4 / 3) * Math.PI * Math.pow(getJarijari(), 3) );
+        this.setVolume((4.0/3.0) * Math.PI * Math.pow(getJarijari(), 3));
         super.hitungVolume(Bangun);
     }
 

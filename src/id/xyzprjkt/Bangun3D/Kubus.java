@@ -21,7 +21,7 @@ public class Kubus extends id.xyzprjkt.LKVBangun.VBangun3D{
 
     @Override
     public void hitungVolume(String Bangun) {
-        this.setVolume( getRusuk() * getRusuk() * getRusuk());
+        this.setVolume(getRusuk() * getRusuk() * getRusuk());
         super.hitungVolume(Bangun);
     }
 

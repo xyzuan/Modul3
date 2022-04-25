@@ -21,7 +21,7 @@ public class Balok extends id.xyzprjkt.LKVBangun.VBangun3D{
 
     @Override
     public void hitungVolume(String Bangun) {
-        this.setVolume( getPanjang() * getLebar() * getTinggi() );
+        this.setVolume(getPanjang() * getLebar() * getTinggi());
         super.hitungVolume(Bangun);
     }
 
