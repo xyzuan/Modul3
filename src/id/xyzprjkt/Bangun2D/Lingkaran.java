@@ -30,7 +30,7 @@ public class Lingkaran extends id.xyzprjkt.LKVBangun.LKBangun2D {
         super.hitungLuas(Bangun);
     }
 
-    public double getJarijari() {
+    private double getJarijari() {
         return jarijari;
     }
 

@@ -16,7 +16,7 @@
 package id.xyzprjkt.LKVBangun;
 
 public class LKBangun2D {
-    private double Luas, Keliling;
+    protected double Luas, Keliling;
 
     protected void inputData(String Data) {
         System.out.print("Masukkan " + Data + " : ");
@@ -32,19 +32,19 @@ public class LKBangun2D {
         System.out.println("Luas dari Bangun " + Bangun + " tersebut adalah " + getLuas());
     }
 
-    public double getLuas() {
+    protected double getLuas() {
         return Luas;
     }
 
-    public void setLuas(double luas) {
+    protected void setLuas(double luas) {
         Luas = luas;
     }
 
-    public double getKeliling() {
+    protected double getKeliling() {
         return Keliling;
     }
 
-    public void setKeliling(double keliling) {
+    protected void setKeliling(double keliling) {
         Keliling = keliling;
     }
 }

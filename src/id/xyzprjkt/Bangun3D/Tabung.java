@@ -26,7 +26,7 @@ public class Tabung extends id.xyzprjkt.LKVBangun.VBangun3D{
         super.hitungVolume(Bangun);
     }
 
-    public double getJarijari() {
+    private double getJarijari() {
         return jarijari;
     }
 
@@ -34,7 +34,7 @@ public class Tabung extends id.xyzprjkt.LKVBangun.VBangun3D{
         this.jarijari = jarijari;
     }
 
-    public double getTinggi() {
+    private double getTinggi() {
         return tinggi;
     }
 

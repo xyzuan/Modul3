@@ -25,7 +25,7 @@ public class Kubus extends id.xyzprjkt.LKVBangun.VBangun3D{
         super.hitungVolume(Bangun);
     }
 
-    public double getRusuk() {
+    private double getRusuk() {
         return rusuk;
     }
 

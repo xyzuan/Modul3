@@ -31,7 +31,7 @@ public class JajarGenjang extends id.xyzprjkt.LKVBangun.LKBangun2D {
         super.hitungLuas(Bangun);
     }
 
-    public double getAlas() {
+    private double getAlas() {
         return alas;
     }
 
@@ -39,7 +39,7 @@ public class JajarGenjang extends id.xyzprjkt.LKVBangun.LKBangun2D {
         this.alas = alas;
     }
 
-    public double getTinggi() {
+    private double getTinggi() {
         return tinggi;
     }
 
@@ -47,7 +47,7 @@ public class JajarGenjang extends id.xyzprjkt.LKVBangun.LKBangun2D {
         this.tinggi = tinggi;
     }
 
-    public double getMiring() {
+    private double getMiring() {
         return miring;
     }
 

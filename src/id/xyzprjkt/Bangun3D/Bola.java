@@ -25,7 +25,7 @@ public class Bola extends id.xyzprjkt.LKVBangun.VBangun3D{
         super.hitungVolume(Bangun);
     }
 
-    public double getJarijari() {
+    private double getJarijari() {
         return jarijari;
     }
 

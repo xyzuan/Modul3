@@ -17,7 +17,7 @@
 package id.xyzprjkt.LKVBangun;
 
 public class VBangun3D {
-    private double Volume;
+    protected double Volume;
 
     protected void inputData(String Data) {
         System.out.print("Masukkan " + Data + " : ");
@@ -28,11 +28,11 @@ public class VBangun3D {
         System.out.println("Volume dari Bangun " + Bangun + " tersebut adalah " + getVolume());
     }
 
-    public double getVolume() {
+    protected double getVolume() {
         return Volume;
     }
 
-    public void setVolume(double volume) {
+    protected void setVolume(double volume) {
         Volume = volume;
     }
 }

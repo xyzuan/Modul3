@@ -30,7 +30,7 @@ public class Persegi extends id.xyzprjkt.LKVBangun.LKBangun2D {
         super.hitungLuas(Bangun);
     }
 
-    public double getSisi() {
+    private double getSisi() {
         return Sisi;
     }
 

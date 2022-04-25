@@ -30,7 +30,7 @@ public class BelahKetupat extends id.xyzprjkt.LKVBangun.LKBangun2D{
         super.hitungLuas(Bangun);
     }
 
-    public double getSisi() {
+    private double getSisi() {
         return Sisi;
     }
 
@@ -38,7 +38,7 @@ public class BelahKetupat extends id.xyzprjkt.LKVBangun.LKBangun2D{
         Sisi = sisi;
     }
 
-    public double getD1() {
+    private double getD1() {
         return d1;
     }
 
@@ -46,7 +46,7 @@ public class BelahKetupat extends id.xyzprjkt.LKVBangun.LKBangun2D{
         this.d1 = d1;
     }
 
-    public double getD2() {
+    private double getD2() {
         return d2;
     }
 

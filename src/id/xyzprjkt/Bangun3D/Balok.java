@@ -25,7 +25,7 @@ public class Balok extends id.xyzprjkt.LKVBangun.VBangun3D{
         super.hitungVolume(Bangun);
     }
 
-    public double getPanjang() {
+    private double getPanjang() {
         return panjang;
     }
 
@@ -33,7 +33,7 @@ public class Balok extends id.xyzprjkt.LKVBangun.VBangun3D{
         this.panjang = panjang;
     }
 
-    public double getLebar() {
+    private double getLebar() {
         return lebar;
     }
 
@@ -41,7 +41,7 @@ public class Balok extends id.xyzprjkt.LKVBangun.VBangun3D{
         this.lebar = lebar;
     }
 
-    public double getTinggi() {
+    private double getTinggi() {
         return tinggi;
     }
 

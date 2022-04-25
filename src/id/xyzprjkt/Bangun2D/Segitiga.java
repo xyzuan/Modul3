@@ -30,7 +30,7 @@ public class Segitiga extends id.xyzprjkt.LKVBangun.LKBangun2D {
         super.hitungLuas(Bangun);
     }
 
-    public double getAlas() {
+    private double getAlas() {
         return Alas;
     }
 
@@ -38,7 +38,7 @@ public class Segitiga extends id.xyzprjkt.LKVBangun.LKBangun2D {
         Alas = alas;
     }
 
-    public double getTinggi() {
+    private double getTinggi() {
         return Tinggi;
     }
 

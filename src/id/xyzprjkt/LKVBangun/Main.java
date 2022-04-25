@@ -26,15 +26,16 @@ import id.xyzprjkt.Bangun2D.*;
 import id.xyzprjkt.Bangun3D.*;
 
 public class Main {
-    Scanner in = new Scanner(System.in);
-    String isBangun;
-    char backMenu;
+    private final Scanner in = new Scanner(System.in);
+    private String isBangun;
+    private char backMenu;
+    private int pilihMenu;
     public static void main(String[] args) {
         Main obj = new Main();
         obj.MainMenu();
     }
 
-    public void MainMenu(){
+    private void MainMenu(){
         Main obj = new Main();
         System.out.println("""
                 =========================================================
@@ -43,7 +44,7 @@ public class Main {
                 =========================================================""");
         System.out.println("1. Menghitung Bangun 2 Dimensi\n2. Menghitung Bangun 3 Dimensi\n0. Keluar");
         System.out.print("Pilih menu : ");
-        int pilihMenu = in.nextInt();
+        pilihMenu = in.nextInt();
         if (pilihMenu == 1){
             obj.hitung2D();
         } else if (pilihMenu == 2){
@@ -53,13 +54,13 @@ public class Main {
         }
     }
 
-    public void hitung2D(){
+    private void hitung2D(){
         do {
             System.out.println("Aplikasi Penghitung Luas & Keliling Bangun Datar");
             System.out.println("1. Persegi\n2. Persegi Panjang\n3. Segitiga\n4. Lingkaran\n5. Jajar Genjang\n6. Belah Ketupat\n0. Kembali");
             System.out.print("Pilih menu : ");
-            int menu = in.nextInt();
-            switch (menu) {
+            pilihMenu = in.nextInt();
+            switch (pilihMenu) {
                 case 1 -> {
                     isBangun = "Persegi";
                     Persegi psg = new Persegi();
@@ -110,13 +111,13 @@ public class Main {
         } while (backMenu == 'Y' || backMenu == 'y');
     }
 
-    public void hitung3D(){
+    private void hitung3D(){
         do {
             System.out.println("Aplikasi Penghitung Volume Bangun Ruang");
             System.out.println("1. Kubus\n2. Balok\n3. Tabung\n4. Bola\n0. Kembali");
             System.out.print("Pilih bangun ruang yang ingin di hitung : ");
-            int menu = in.nextInt();
-            switch (menu) {
+            pilihMenu = in.nextInt();
+            switch (pilihMenu) {
                 case 1 -> {
                     isBangun = "Kubus";
                     Kubus cube = new Kubus();

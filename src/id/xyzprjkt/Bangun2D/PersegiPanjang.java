@@ -30,7 +30,7 @@ public class PersegiPanjang extends id.xyzprjkt.LKVBangun.LKBangun2D {
         super.hitungLuas(Bangun);
     }
 
-    public double getPanjang() {
+    private double getPanjang() {
         return Panjang;
     }
 
@@ -38,7 +38,7 @@ public class PersegiPanjang extends id.xyzprjkt.LKVBangun.LKBangun2D {
         Panjang = panjang;
     }
 
-    public double getLebar() {
+    private double getLebar() {
         return Lebar;
     }
 
