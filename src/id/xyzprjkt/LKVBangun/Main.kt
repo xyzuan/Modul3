@@ -15,16 +15,6 @@
  */
 package id.xyzprjkt.LKVBangun
 
-import id.xyzprjkt.Bangun2D.Persegi
-import id.xyzprjkt.Bangun2D.PersegiPanjang
-import id.xyzprjkt.Bangun2D.Segitiga
-import id.xyzprjkt.Bangun2D.Lingkaran
-import id.xyzprjkt.Bangun2D.JajarGenjang
-import id.xyzprjkt.Bangun2D.BelahKetupat
-import id.xyzprjkt.Bangun3D.Kubus
-import id.xyzprjkt.Bangun3D.Balok
-import id.xyzprjkt.Bangun3D.Tabung
-import id.xyzprjkt.Bangun3D.Bola
 import java.util.*
 import kotlin.jvm.JvmStatic
 import kotlin.system.exitProcess
@@ -33,7 +23,11 @@ import kotlin.system.exitProcess
    Including 2D : Persegi, Persegi Panjang, Belah Ketupat, Jajar Genjang
                   Lingkaran, Segitiga.
    Including 3D : Kubus, Balok, Tabung, Bola.
-*/   class Main {
+*/
+import id.xyzprjkt.Bangun2D.*
+import id.xyzprjkt.Bangun3D.*
+
+class Main {
     var `in` = Scanner(System.`in`)
     private var isBangun: String? = null
     private var backMenu = 0.toChar()
