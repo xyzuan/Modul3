@@ -14,27 +14,43 @@
  * limitations under the License.
  */
 
-package Bangun2D;
+package id.xyzprjkt.Bangun2D;
 
-public class Lingkaran extends id.xyzprjkt.lkbangun.LKBangun2D {
-    private double jarijari;
+public class BelahKetupat extends id.xyzprjkt.LKVBangun.LKBangun2D{
+    private double Sisi, d1, d2;
 
     @Override
     public void hitungKeliling(String Bangun) {
-        this.setKeliling(( 2 * Math.PI * getJarijari()));
+        this.setKeliling(( 4 * getSisi()));
         super.hitungKeliling(Bangun);
     }
     @Override
     public void hitungLuas(String Bangun) {
-        this.setLuas(( Math.PI * getJarijari() * getJarijari()));
+        this.setLuas(( 0.5 * getD1() * getD2()));
         super.hitungLuas(Bangun);
     }
 
-    public double getJarijari() {
-        return jarijari;
+    public double getSisi() {
+        return Sisi;
     }
 
-    public void setJarijari(double jarijari) {
-        this.jarijari = jarijari;
+    public void setSisi(double sisi) {
+        Sisi = sisi;
+    }
+
+    public double getD1() {
+        return d1;
+    }
+
+    public void setD1(double d1) {
+        this.d1 = d1;
+    }
+
+    public double getD2() {
+        return d2;
+    }
+
+    public void setD2(double d2) {
+        this.d2 = d2;
     }
 }

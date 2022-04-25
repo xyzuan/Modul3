@@ -14,35 +14,27 @@
  * limitations under the License.
  */
 
-package Bangun2D;
+package id.xyzprjkt.Bangun2D;
 
-public class PersegiPanjang extends id.xyzprjkt.lkbangun.LKBangun2D {
-    private double Panjang, Lebar;
+public class Persegi extends id.xyzprjkt.LKVBangun.LKBangun2D {
+    private double Sisi;
 
     @Override
     public void hitungKeliling(String Bangun) {
-        this.setKeliling(( getPanjang() * 2 ) + ( getLebar() * 2 ));
+        this.setKeliling(getSisi() * 4);
         super.hitungKeliling(Bangun);
     }
     @Override
     public void hitungLuas(String Bangun) {
-        this.setLuas(getPanjang() * getLebar());
+        this.setLuas(getSisi() * getSisi());
         super.hitungLuas(Bangun);
     }
 
-    public double getPanjang() {
-        return Panjang;
+    public double getSisi() {
+        return Sisi;
     }
 
-    public void setPanjang(double panjang) {
-        Panjang = panjang;
-    }
-
-    public double getLebar() {
-        return Lebar;
-    }
-
-    public void setLebar(double lebar) {
-        Lebar = lebar;
+    public void setSisi(double sisi) {
+        Sisi = sisi;
     }
 }

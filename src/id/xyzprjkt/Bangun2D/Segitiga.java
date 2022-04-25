@@ -14,43 +14,35 @@
  * limitations under the License.
  */
 
-package Bangun2D;
+package id.xyzprjkt.Bangun2D;
 
-public class BelahKetupat extends id.xyzprjkt.lkbangun.LKBangun2D{
-    private double Sisi, d1, d2;
+public class Segitiga extends id.xyzprjkt.LKVBangun.LKBangun2D {
+    private double Alas, Tinggi;
 
     @Override
     public void hitungKeliling(String Bangun) {
-        this.setKeliling(( 4 * getSisi()));
+        this.setKeliling(( 2 * (Math.sqrt(Math.pow(0.5 * getAlas(), 2) + Math.pow(getTinggi(), 2))) + getAlas()));
         super.hitungKeliling(Bangun);
     }
     @Override
     public void hitungLuas(String Bangun) {
-        this.setLuas(( 0.5 * getD1() * getD2()));
+        this.setLuas(( 0.5 * getAlas() * getTinggi()));
         super.hitungLuas(Bangun);
     }
 
-    public double getSisi() {
-        return Sisi;
+    public double getAlas() {
+        return Alas;
     }
 
-    public void setSisi(double sisi) {
-        Sisi = sisi;
+    public void setAlas(double alas) {
+        Alas = alas;
     }
 
-    public double getD1() {
-        return d1;
+    public double getTinggi() {
+        return Tinggi;
     }
 
-    public void setD1(double d1) {
-        this.d1 = d1;
-    }
-
-    public double getD2() {
-        return d2;
-    }
-
-    public void setD2(double d2) {
-        this.d2 = d2;
+    public void setTinggi(double tinggi) {
+        Tinggi = tinggi;
     }
 }
