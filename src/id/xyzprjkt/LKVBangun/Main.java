@@ -24,7 +24,7 @@ import java.util.Scanner;
 import id.xyzprjkt.Bangun2D.*;
 
 /* 3D Chill Class
-   Including : Kubus.
+   Including : Kubus, Balok, Tabung, Bola.
 */
 import id.xyzprjkt.Bangun3D.*;
 
