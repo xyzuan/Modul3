@@ -13,23 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+package id.xyzprjkt.Bangun3D
 
-package id.xyzprjkt.Bangun3D;
+import id.xyzprjkt.LKVBangun.VBangun3D
 
-public class Kubus extends id.xyzprjkt.LKVBangun.VBangun3D{
-    private double rusuk;
-
-    @Override
-    public void hitungVolume(String Bangun) {
-        this.setVolume( getRusuk() * getRusuk() * getRusuk());
-        super.hitungVolume(Bangun);
-    }
-
-    public double getRusuk() {
-        return rusuk;
-    }
-
-    public void setRusuk(double rusuk) {
-        this.rusuk = rusuk;
+class Kubus : VBangun3D() {
+    var rusuk = 0.0
+    public override fun hitungVolume(Bangun: String) {
+        volume = rusuk * rusuk * rusuk
+        super.hitungVolume(Bangun)
     }
 }

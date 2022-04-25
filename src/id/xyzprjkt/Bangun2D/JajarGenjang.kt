@@ -13,28 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+package id.xyzprjkt.Bangun2D
 
-package id.xyzprjkt.Bangun2D;
+import id.xyzprjkt.LKVBangun.LKBangun2D
 
-public class Persegi extends id.xyzprjkt.LKVBangun.LKBangun2D {
-    private double Sisi;
-
-    @Override
-    public void hitungKeliling(String Bangun) {
-        this.setKeliling(getSisi() * 4);
-        super.hitungKeliling(Bangun);
-    }
-    @Override
-    public void hitungLuas(String Bangun) {
-        this.setLuas(getSisi() * getSisi());
-        super.hitungLuas(Bangun);
+class JajarGenjang : LKBangun2D() {
+    var alas = 0.0
+    var tinggi = 0.0
+    var miring = 0.0
+    public override fun hitungKeliling(Bangun: String) {
+        keliling = 2 * (alas + miring)
+        super.hitungKeliling(Bangun)
     }
 
-    public double getSisi() {
-        return Sisi;
-    }
-
-    public void setSisi(double sisi) {
-        Sisi = sisi;
+    public override fun hitungLuas(Bangun: String) {
+        luas = alas * tinggi
+        super.hitungLuas(Bangun)
     }
 }

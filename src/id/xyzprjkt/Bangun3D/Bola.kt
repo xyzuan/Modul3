@@ -13,28 +13,15 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+package id.xyzprjkt.Bangun3D
 
-package id.xyzprjkt.Bangun2D;
+import id.xyzprjkt.LKVBangun.VBangun3D
+import kotlin.math.*
 
-public class Lingkaran extends id.xyzprjkt.LKVBangun.LKBangun2D {
-    private double jarijari;
-
-    @Override
-    public void hitungKeliling(String Bangun) {
-        this.setKeliling(( 2 * Math.PI * getJarijari()));
-        super.hitungKeliling(Bangun);
-    }
-    @Override
-    public void hitungLuas(String Bangun) {
-        this.setLuas(( Math.PI * Math.pow(getJarijari(), 2)));
-        super.hitungLuas(Bangun);
-    }
-
-    public double getJarijari() {
-        return jarijari;
-    }
-
-    public void setJarijari(double jarijari) {
-        this.jarijari = jarijari;
+class Bola : VBangun3D() {
+    var jarijari = 0.0
+    public override fun hitungVolume(Bangun: String) {
+        volume = 4 / 3 * Math.PI * jarijari.pow(3.0)
+        super.hitungVolume(Bangun)
     }
 }

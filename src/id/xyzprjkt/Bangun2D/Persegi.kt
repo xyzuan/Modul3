@@ -13,32 +13,19 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+package id.xyzprjkt.Bangun2D
 
-package id.xyzprjkt.Bangun3D;
+import id.xyzprjkt.LKVBangun.LKBangun2D
 
-public class Tabung extends id.xyzprjkt.LKVBangun.VBangun3D{
-    private double jarijari;
-    private double tinggi;
-
-    @Override
-    public void hitungVolume(String Bangun) {
-        this.setVolume( Math.PI * getJarijari() * getJarijari() * getTinggi());
-        super.hitungVolume(Bangun);
+class Persegi : LKBangun2D() {
+    var sisi = 0.0
+    public override fun hitungKeliling(Bangun: String) {
+        keliling = sisi * 4
+        super.hitungKeliling(Bangun)
     }
 
-    public double getJarijari() {
-        return jarijari;
-    }
-
-    public void setJarijari(double jarijari) {
-        this.jarijari = jarijari;
-    }
-
-    public double getTinggi() {
-        return tinggi;
-    }
-
-    public void setTinggi(double tinggi) {
-        this.tinggi = tinggi;
+    public override fun hitungLuas(Bangun: String) {
+        luas = sisi * sisi
+        super.hitungLuas(Bangun)
     }
 }

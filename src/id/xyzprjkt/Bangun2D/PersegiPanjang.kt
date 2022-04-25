@@ -13,23 +13,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+package id.xyzprjkt.Bangun2D
 
-package id.xyzprjkt.Bangun3D;
+import id.xyzprjkt.LKVBangun.LKBangun2D
 
-public class Bola extends id.xyzprjkt.LKVBangun.VBangun3D{
-    private double jarijari;
-
-    @Override
-    public void hitungVolume(String Bangun) {
-        this.setVolume( ( 4 / 3) * Math.PI * Math.pow(getJarijari(), 3) );
-        super.hitungVolume(Bangun);
+class PersegiPanjang : LKBangun2D() {
+    var panjang = 0.0
+    var lebar = 0.0
+    public override fun hitungKeliling(Bangun: String) {
+        keliling = panjang * 2 + lebar * 2
+        super.hitungKeliling(Bangun)
     }
 
-    public double getJarijari() {
-        return jarijari;
-    }
-
-    public void setJarijari(double jarijari) {
-        this.jarijari = jarijari;
+    public override fun hitungLuas(Bangun: String) {
+        luas = panjang * lebar
+        super.hitungLuas(Bangun)
     }
 }

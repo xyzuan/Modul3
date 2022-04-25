@@ -13,26 +13,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+package id.xyzprjkt.LKVBangun
 
-package id.xyzprjkt.LKVBangun;
-
-public class VBangun3D {
-    private double Volume;
-
-    protected void inputData(String Data) {
-        System.out.print("Masukkan " + Data + " : ");
+open class VBangun3D {
+    var volume = 0.0
+    fun inputData(Data: String) {
+        print("Masukkan $Data : ")
     }
 
-    protected void hitungVolume(String Bangun){
+    protected open fun hitungVolume(Bangun: String) {
         // Placeholder for Volume Operation isHere
-        System.out.println("Volume dari Bangun " + Bangun + " tersebut adalah " + getVolume());
-    }
-
-    public double getVolume() {
-        return Volume;
-    }
-
-    public void setVolume(double volume) {
-        Volume = volume;
+        println("Volume dari Bangun $Bangun tersebut adalah $volume")
     }
 }
