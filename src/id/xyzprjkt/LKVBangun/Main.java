@@ -17,25 +17,24 @@ package id.xyzprjkt.LKVBangun;
 
 import java.util.Scanner;
 
-/* 2D Chill Class
-   Including : Persegi, Persegi Panjang, Belah Ketupat, Jajar Genjang
-               Lingkaran, Segitiga.
+/* 2D & 3D Chill Class
+   Including 2D : Persegi, Persegi Panjang, Belah Ketupat, Jajar Genjang
+                  Lingkaran, Segitiga.
+   Including 3D : Kubus, Balok, Tabung, Bola.
 */
 import id.xyzprjkt.Bangun2D.*;
-
-/* 3D Chill Class
-   Including : Kubus, Balok, Tabung, Bola.
-*/
 import id.xyzprjkt.Bangun3D.*;
 
 public class Main {
+    Scanner in = new Scanner(System.in);
+    String isBangun;
+    char backMenu;
     public static void main(String[] args) {
         Main obj = new Main();
         obj.MainMenu();
     }
 
     public void MainMenu(){
-        Scanner in = new Scanner(System.in);
         Main obj = new Main();
         System.out.println("""
                 =========================================================
@@ -55,14 +54,11 @@ public class Main {
     }
 
     public void hitung2D(){
-        Scanner in = new Scanner(System.in);
-        char backMenu;
         do {
             System.out.println("Aplikasi Penghitung Luas & Keliling Bangun Datar");
             System.out.println("1. Persegi\n2. Persegi Panjang\n3. Segitiga\n4. Lingkaran\n5. Jajar Genjang\n6. Belah Ketupat\n0. Kembali");
             System.out.print("Pilih menu : ");
             int menu = in.nextInt();
-            String isBangun;
             switch (menu) {
                 case 1 -> {
                     isBangun = "Persegi";
@@ -115,14 +111,11 @@ public class Main {
     }
 
     public void hitung3D(){
-        Scanner in = new Scanner(System.in);
-        char backMenu;
         do {
             System.out.println("Aplikasi Penghitung Volume Bangun Ruang");
             System.out.println("1. Kubus\n2. Balok\n3. Tabung\n4. Bola\n0. Kembali");
             System.out.print("Pilih bangun ruang yang ingin di hitung : ");
             int menu = in.nextInt();
-            String isBangun;
             switch (menu) {
                 case 1 -> {
                     isBangun = "Kubus";
