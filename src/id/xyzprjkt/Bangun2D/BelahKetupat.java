@@ -16,8 +16,29 @@
 
 package id.xyzprjkt.Bangun2D;
 
+import java.util.Objects;
+import java.util.Scanner;
+
 public class BelahKetupat extends id.xyzprjkt.LKVBangun.LKBangun2D{
     private double Sisi, d1, d2;
+
+    @Override
+    public void inputData(String Data) {
+        if (Objects.equals(Data, "Sisi")){
+            super.inputData(Data);
+            Scanner in = new Scanner(System.in);
+            setSisi(in.nextDouble());
+        } else if (Objects.equals(Data, "Diagonal-1")){
+            super.inputData(Data);
+            Scanner in = new Scanner(System.in);
+            setD1(in.nextDouble());
+        } else if (Objects.equals(Data, "Diagonal-2")){
+            super.inputData(Data);
+            Scanner in = new Scanner(System.in);
+            setD2(in.nextDouble());
+        } else {
+            System.out.println("DEBUG : " + "Exception Parameters [" + Data + "] are not registered in the subclass" );        }
+    }
 
     @Override
     public void hitungKeliling(String Bangun) {

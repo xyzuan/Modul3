@@ -61,47 +61,34 @@ public class Main {
             System.out.print("Pilih menu : ");
             pilihMenu = in.nextInt();
             switch (pilihMenu) {
-                case 1 -> {
-                    isBangun = "Persegi";
+                case 1 -> { isBangun = "Persegi";
                     Persegi psg = new Persegi();
-                    psg.inputData("Sisi"); psg.setSisi(in.nextDouble());
+                    psg.inputData("Sisi");
                     psg.hitungKeliling(isBangun); psg.hitungLuas(isBangun);
                 }
-                case 2 -> {
-                    isBangun = "Persegi Panjang";
+                case 2 -> { isBangun = "Persegi Panjang";
                     PersegiPanjang psgp = new PersegiPanjang();
-                    psgp.inputData("Panjang"); psgp.setPanjang(in.nextDouble());
-                    psgp.inputData("Lebar"); psgp.setLebar(in.nextDouble());
+                    psgp.inputData("Panjang"); psgp.inputData("Lebar");
                     psgp.hitungKeliling(isBangun); psgp.hitungLuas(isBangun);
                 }
-                case 3 -> {
-                    isBangun = "Segitiga";
+                case 3 -> { isBangun = "Segitiga";
                     Segitiga sgt = new Segitiga();
-                    sgt.inputData("Alas"); sgt.setAlas(in.nextDouble());
-                    sgt.inputData("Tinggi"); sgt.setTinggi(in.nextDouble());
+                    sgt.inputData("Alas"); sgt.inputData("Tinggi");
                     sgt.hitungKeliling(isBangun); sgt.hitungLuas(isBangun);
                 }
-                case 4 -> {
-                    isBangun = "Lingkaran";
+                case 4 -> { isBangun = "Lingkaran";
                     Lingkaran crcl = new Lingkaran();
-                    crcl.inputData("jari - jari"); crcl.setJarijari(in.nextDouble());
+                    crcl.inputData("Jarijari");
                     crcl.hitungKeliling(isBangun); crcl.hitungLuas(isBangun);
                 }
-                case 5 -> {
-                    isBangun = "Jajar Genjang";
+                case 5 -> { isBangun = "Jajar Genjang";
                     JajarGenjang jg = new JajarGenjang();
-                    jg.inputData("Alas"); jg.setAlas(in.nextDouble());
-                    jg.inputData("Tinggi"); jg.setTinggi(in.nextDouble());
-                    jg.inputData("Sisi Miring"); jg.setMiring(in.nextDouble());
+                    jg.inputData("Alas"); jg.inputData("Tinggi"); jg.inputData("Sisi Miring");
                     jg.hitungKeliling(isBangun); jg.hitungLuas(isBangun);
                 }
-                case 6 -> {
-                    isBangun = "Belah Ketupat";
+                case 6 -> { isBangun = "Belah Ketupat";
                     BelahKetupat bk = new BelahKetupat();
-                    bk.inputData("Sisi");
-                    bk.setSisi(in.nextDouble());
-                    bk.inputData("Diagonal-1"); bk.setD1(in.nextDouble());
-                    bk.inputData("Diagonal-2"); bk.setD2(in.nextDouble());
+                    bk.inputData("Sisi"); bk.inputData("Diagonal-1"); bk.inputData("Diagonal-2");
                     bk.hitungKeliling(isBangun); bk.hitungLuas(isBangun);
                 }
                 case 0 -> MainMenu();
@@ -118,38 +105,29 @@ public class Main {
             System.out.print("Pilih bangun ruang yang ingin di hitung : ");
             pilihMenu = in.nextInt();
             switch (pilihMenu) {
-                case 1 -> {
-                    isBangun = "Kubus";
+                case 1 -> { isBangun = "Kubus";
                     Kubus cube = new Kubus();
-                    cube.inputData("Rusuk"); cube.setRusuk(in.nextDouble());
+                    cube.inputData("Rusuk");
                     cube.hitungVolume(isBangun);
                 }
-                case 2 -> {
-                    isBangun = "Balok";
+                case 2 -> { isBangun = "Balok";
                     Balok blk = new Balok();
-                    blk.inputData("Panjang"); blk.setPanjang(in.nextDouble());
-                    blk.inputData("Lebar"); blk.setLebar(in.nextDouble());
-                    blk.inputData("Tinggi"); blk.setTinggi(in.nextDouble());
+                    blk.inputData("Panjang"); blk.inputData("Lebar"); blk.inputData("Tinggi");
                     blk.hitungVolume(isBangun);
                 }
-                case 3 -> {
-                    isBangun = "Tabung";
+                case 3 -> { isBangun = "Tabung";
                     Tabung tb = new Tabung();
-                    tb.inputData("Jari - jari"); tb.setJarijari(in.nextDouble());
-                    tb.inputData("Tinggi"); tb.setTinggi(in.nextDouble());
+                    tb.inputData("JariJari"); tb.inputData("Tinggi");
                     tb.hitungVolume(isBangun);
                 }
-                case 4 -> {
-                    isBangun = "Bola";
+                case 4 -> { isBangun = "Bola";
                     Bola ball = new Bola();
-                    ball.inputData("Jari - jari"); ball.setJarijari(in.nextDouble());
+                    ball.inputData("JariJari");
                     ball.hitungVolume(isBangun);
                 }
-                case 5 -> {
-                    isBangun = "Kerucut";
+                case 5 -> { isBangun = "Kerucut";
                     Kerucut kr = new Kerucut();
-                    kr.inputData("Jari - jari"); kr.setJarijari(in.nextDouble());
-                    kr.inputData("Tinggi"); kr.setTinggi(in.nextDouble());
+                    kr.inputData("JariJari"); kr.inputData("Tinggi");
                     kr.hitungVolume(isBangun);
                 }
                 case 0 -> MainMenu();

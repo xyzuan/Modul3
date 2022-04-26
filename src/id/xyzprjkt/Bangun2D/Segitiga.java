@@ -16,8 +16,25 @@
 
 package id.xyzprjkt.Bangun2D;
 
+import java.util.Objects;
+import java.util.Scanner;
+
 public class Segitiga extends id.xyzprjkt.LKVBangun.LKBangun2D {
     private double Alas, Tinggi;
+
+    @Override
+    public void inputData(String Data) {
+        if (Objects.equals(Data, "Alas")){
+            super.inputData(Data);
+            Scanner in = new Scanner(System.in);
+            setAlas(in.nextDouble());
+        } else if (Objects.equals(Data, "Tinggi")){
+            super.inputData(Data);
+            Scanner in = new Scanner(System.in);
+            setTinggi(in.nextDouble());
+        } else {
+            System.out.println("DEBUG : " + "Exception Parameters [" + Data + "] are not registered in the subclass" );        }
+    }
 
     @Override
     public void hitungKeliling(String Bangun) {

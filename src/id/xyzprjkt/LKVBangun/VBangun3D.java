@@ -16,11 +16,34 @@
 
 package id.xyzprjkt.LKVBangun;
 
+import java.util.Objects;
+
 public class VBangun3D {
     protected double Volume;
 
     protected void inputData(String Data) {
-        System.out.print("Masukkan " + Data + " : ");
+        if(
+           /*
+              This list object are will be used for inputData Operation
+              It need to be change the if function and add setter function
+              between this equal object depend on the shape
+           */
+                Objects.equals(Data, "Sisi") ||
+                Objects.equals(Data, "Rusuk") ||
+                Objects.equals(Data, "Panjang") ||
+                Objects.equals(Data, "Lebar") ||
+                Objects.equals(Data, "Tinggi") ||
+                Objects.equals(Data, "JariJari"))
+        {
+            System.out.print("Masukkan " + Data + " : ");
+            /*
+               Placeholder for inputData Setter Function
+               Example :
+                    super.inputData(Data);
+                    Scanner in = new Scanner(System.in);
+                    setSisi(in.nextDouble());
+            */
+        }
     }
 
     protected void hitungVolume(String Bangun){

@@ -16,8 +16,21 @@
 
 package id.xyzprjkt.Bangun2D;
 
+import java.util.Objects;
+import java.util.Scanner;
+
 public class Persegi extends id.xyzprjkt.LKVBangun.LKBangun2D {
     private double Sisi;
+
+    @Override
+    public void inputData(String Data) {
+        if (Objects.equals(Data, "Sisi")){
+            super.inputData(Data);
+            Scanner in = new Scanner(System.in);
+            setSisi(in.nextDouble());
+        } else {
+            System.out.println("DEBUG : " + "Exception Parameters [" + Data + "] are not registered in the subclass" );        }
+    }
 
     @Override
     public void hitungKeliling(String Bangun) {

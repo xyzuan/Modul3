@@ -16,8 +16,29 @@
 
 package id.xyzprjkt.Bangun3D;
 
+import java.util.Objects;
+import java.util.Scanner;
+
 public class Balok extends id.xyzprjkt.LKVBangun.VBangun3D{
     private double panjang, lebar, tinggi;
+
+    @Override
+    public void inputData(String Data) {
+        if (Objects.equals(Data, "Panjang")){
+            super.inputData(Data);
+            Scanner in = new Scanner(System.in);
+            setPanjang(in.nextDouble());
+        } else if (Objects.equals(Data, "Lebar")){
+            super.inputData(Data);
+            Scanner in = new Scanner(System.in);
+            setLebar(in.nextDouble());
+        } else if (Objects.equals(Data, "Tinggi")){
+            super.inputData(Data);
+            Scanner in = new Scanner(System.in);
+            setTinggi(in.nextDouble());
+        } else {
+            System.out.println("DEBUG : " + "Exception Parameters [" + Data + "] are not registered in the subclass" );        }
+    }
 
     @Override
     public void hitungVolume(String Bangun) {

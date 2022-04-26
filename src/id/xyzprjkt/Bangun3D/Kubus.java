@@ -16,8 +16,21 @@
 
 package id.xyzprjkt.Bangun3D;
 
+import java.util.Objects;
+import java.util.Scanner;
+
 public class Kubus extends id.xyzprjkt.LKVBangun.VBangun3D{
     private double rusuk;
+
+    @Override
+    public void inputData(String Data) {
+        if (Objects.equals(Data, "Rusuk")){
+            super.inputData(Data);
+            Scanner in = new Scanner(System.in);
+            setRusuk(in.nextDouble());
+        } else {
+            System.out.println("DEBUG : " + "Exception Parameters [" + Data + "] are not registered in the subclass" );        }
+    }
 
     @Override
     public void hitungVolume(String Bangun) {
