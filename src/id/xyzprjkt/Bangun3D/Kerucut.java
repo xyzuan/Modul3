@@ -24,7 +24,7 @@ public class Kerucut extends id.xyzprjkt.LKVBangun.VBangun3D{
 
     @Override
     public void inputData(String Data) {
-        if (Objects.equals(Data, "Jarijari")){
+        if (Objects.equals(Data, "JariJari")){
             super.inputData(Data);
             Scanner in = new Scanner(System.in);
             setJarijari(in.nextDouble());
@@ -33,7 +33,8 @@ public class Kerucut extends id.xyzprjkt.LKVBangun.VBangun3D{
             Scanner in = new Scanner(System.in);
             setTinggi(in.nextDouble());
         } else {
-            System.out.println("DEBUG : " + "Exception Parameters [" + Data + "] are not registered in the subclass" );        }
+            debugInput(Data);
+        }
     }
 
     @Override

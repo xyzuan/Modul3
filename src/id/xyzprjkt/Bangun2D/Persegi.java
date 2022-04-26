@@ -29,7 +29,8 @@ public class Persegi extends id.xyzprjkt.LKVBangun.LKBangun2D {
             Scanner in = new Scanner(System.in);
             setSisi(in.nextDouble());
         } else {
-            System.out.println("DEBUG : " + "Exception Parameters [" + Data + "] are not registered in the subclass" );        }
+            debugInput(Data);
+        }
     }
 
     @Override

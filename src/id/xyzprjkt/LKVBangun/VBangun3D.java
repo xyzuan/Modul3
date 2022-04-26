@@ -25,15 +25,15 @@ public class VBangun3D {
         if(
            /*
               This list object are will be used for inputData Operation
-              It need to be change the if function and add setter function
+              need to be change the if function and add setter function
               between this equal object depend on the shape
            */
-                Objects.equals(Data, "Sisi") ||
-                Objects.equals(Data, "Rusuk") ||
-                Objects.equals(Data, "Panjang") ||
-                Objects.equals(Data, "Lebar") ||
-                Objects.equals(Data, "Tinggi") ||
-                Objects.equals(Data, "JariJari"))
+           Objects.equals(Data, "Sisi") ||
+           Objects.equals(Data, "Rusuk") ||
+           Objects.equals(Data, "Panjang") ||
+           Objects.equals(Data, "Lebar") ||
+           Objects.equals(Data, "Tinggi") ||
+           Objects.equals(Data, "JariJari"))
         {
             System.out.print("Masukkan " + Data + " : ");
             /*
@@ -43,6 +43,13 @@ public class VBangun3D {
                     Scanner in = new Scanner(System.in);
                     setSisi(in.nextDouble());
             */
+        }
+    }
+
+    protected void debugInput(String params){
+        Main obj = new Main();
+        if(obj.isDebug) {
+            System.out.println("DEBUG : " + "Exception Parameters [" + params + "] are not registered in the subclass");
         }
     }
 

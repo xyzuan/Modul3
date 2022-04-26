@@ -28,6 +28,7 @@ import id.xyzprjkt.Bangun3D.*;
 public class Main {
     private final Scanner in = new Scanner(System.in);
     private String isBangun;
+    protected boolean isDebug = true;
     private char backMenu;
     private int pilihMenu;
     public static void main(String[] args) {

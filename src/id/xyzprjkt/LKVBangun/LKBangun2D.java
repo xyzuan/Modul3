@@ -16,7 +16,6 @@
 package id.xyzprjkt.LKVBangun;
 
 import java.util.Objects;
-import java.util.Scanner;
 
 public class LKBangun2D {
     protected double Luas, Keliling;
@@ -46,6 +45,13 @@ public class LKBangun2D {
                     Scanner in = new Scanner(System.in);
                     setSisi(in.nextDouble());
             */
+        }
+    }
+
+    protected void debugInput(String params){
+        Main obj = new Main();
+        if(obj.isDebug) {
+            System.out.println("DEBUG : " + "Exception Parameters [" + params + "] are not registered in the subclass");
         }
     }
 
