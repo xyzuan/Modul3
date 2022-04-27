@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package id.xyzprjkt.Bangun3D;
+package id.xyzprjkt.LKVBangun.Bangun3D;
 
 import java.util.Objects;
 import java.util.Scanner;

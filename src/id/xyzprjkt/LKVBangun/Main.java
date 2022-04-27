@@ -22,8 +22,8 @@ import java.util.Scanner;
                   Lingkaran, Segitiga.
    Including 3D : Kubus, Balok, Tabung, Bola.
 */
-import id.xyzprjkt.Bangun2D.*;
-import id.xyzprjkt.Bangun3D.*;
+import id.xyzprjkt.LKVBangun.Bangun2D.*;
+import id.xyzprjkt.LKVBangun.Bangun3D.*;
 
 public class Main {
     private final Scanner in = new Scanner(System.in);

@@ -14,60 +14,47 @@
  * limitations under the License.
  */
 
-package id.xyzprjkt.Bangun2D;
+package id.xyzprjkt.LKVBangun.Bangun2D;
 
 import java.util.Objects;
 import java.util.Scanner;
 
-public class PersegiPanjang extends id.xyzprjkt.LKVBangun.LKBangun2D {
-    private double Panjang, Lebar;
+public class Lingkaran extends id.xyzprjkt.LKVBangun.LKBangun2D {
+    private double jarijari;
 
     @Override
     public void inputData(String Data) {
-        if (Objects.equals(Data, "Panjang")){
+        if (Objects.equals(Data, "JariJari")){
             super.inputData(Data);
             Scanner in = new Scanner(System.in);
-            setPanjang(in.nextDouble());
-        } else if (Objects.equals(Data, "Lebar")){
-            super.inputData(Data);
-            Scanner in = new Scanner(System.in);
-            setLebar(in.nextDouble());
+            setJarijari(in.nextDouble());
         } else {
             debugInput(Data);
         }
     }
 
     @Override
-    public void infoBangun(String bangunDatar, String p, String p2) {
+    public void infoBangun(String bangunDatar, String p) {
         super.infoBangun(bangunDatar);
-        System.out.print(p + " : " + getPanjang() + "\t");
-        System.out.print(p2 + " : " + getLebar() + "\t\n");
+        System.out.print(p + " : " + getJarijari() + "\t\n");
     }
 
     @Override
     public void hitungKeliling(String Bangun) {
-        this.setKeliling(( getPanjang() * 2 ) + ( getLebar() * 2 ));
+        this.setKeliling(( 2 * Math.PI * getJarijari()));
         super.hitungKeliling(Bangun);
     }
     @Override
     public void hitungLuas(String Bangun) {
-        this.setLuas(getPanjang() * getLebar());
+        this.setLuas(( Math.PI * Math.pow(getJarijari(), 2)));
         super.hitungLuas(Bangun);
     }
 
-    private double getPanjang() {
-        return Panjang;
+    private double getJarijari() {
+        return jarijari;
     }
 
-    public void setPanjang(double panjang) {
-        Panjang = panjang;
-    }
-
-    private double getLebar() {
-        return Lebar;
-    }
-
-    public void setLebar(double lebar) {
-        Lebar = lebar;
+    public void setJarijari(double jarijari) {
+        this.jarijari = jarijari;
     }
 }

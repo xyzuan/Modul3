@@ -14,20 +14,20 @@
  * limitations under the License.
  */
 
-package id.xyzprjkt.Bangun3D;
+package id.xyzprjkt.LKVBangun.Bangun3D;
 
 import java.util.Objects;
 import java.util.Scanner;
 
-public class Kubus extends id.xyzprjkt.LKVBangun.VBangun3D{
-    private double rusuk;
+public class Bola extends id.xyzprjkt.LKVBangun.VBangun3D{
+    private double jarijari;
 
     @Override
     public void inputData(String Data) {
-        if (Objects.equals(Data, "Rusuk")){
+        if (Objects.equals(Data, "Jarijari")){
             super.inputData(Data);
             Scanner in = new Scanner(System.in);
-            setRusuk(in.nextDouble());
+            setJarijari(in.nextDouble());
         } else {
             debugInput(Data);
         }
@@ -36,20 +36,20 @@ public class Kubus extends id.xyzprjkt.LKVBangun.VBangun3D{
     @Override
     public void infoBangun(String bangunRuang, String p) {
         super.infoBangun(bangunRuang);
-        System.out.print(p + " : " + getRusuk() + "\t\n");
+        System.out.print(p + " : " + getJarijari() + "\t\n");
     }
 
     @Override
     public void hitungVolume(String Bangun) {
-        this.setVolume(getRusuk() * getRusuk() * getRusuk());
+        this.setVolume((4.0/3.0) * Math.PI * Math.pow(getJarijari(), 3));
         super.hitungVolume(Bangun);
     }
 
-    private double getRusuk() {
-        return rusuk;
+    private double getJarijari() {
+        return jarijari;
     }
 
-    public void setRusuk(double rusuk) {
-        this.rusuk = rusuk;
+    public void setJarijari(double jarijari) {
+        this.jarijari = jarijari;
     }
 }

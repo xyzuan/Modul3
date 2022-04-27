@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package id.xyzprjkt.Bangun2D;
+package id.xyzprjkt.LKVBangun.Bangun2D;
 
 import java.util.Objects;
 import java.util.Scanner;
 
-public class JajarGenjang extends id.xyzprjkt.LKVBangun.LKBangun2D {
-    private double alas, tinggi, miring;
+public class Segitiga extends id.xyzprjkt.LKVBangun.LKBangun2D {
+    private double Alas, Tinggi;
 
     @Override
     public void inputData(String Data) {
@@ -32,56 +32,42 @@ public class JajarGenjang extends id.xyzprjkt.LKVBangun.LKBangun2D {
             super.inputData(Data);
             Scanner in = new Scanner(System.in);
             setTinggi(in.nextDouble());
-        } else if (Objects.equals(Data, "Sisi Miring")){
-            super.inputData(Data);
-            Scanner in = new Scanner(System.in);
-            setMiring(in.nextDouble());
         } else {
             debugInput(Data);
         }
     }
 
     @Override
-    public void infoBangun(String bangunDatar, String p, String p2, String p3) {
+    public void infoBangun(String bangunDatar, String p, String p2) {
         super.infoBangun(bangunDatar);
         System.out.print(p + " : " + getAlas() + "\t");
-        System.out.print(p2 + " : " + getTinggi() + "\t");
-        System.out.print(p3 + " : " + getMiring() + "\t\n");
+        System.out.print(p2 + " : " + getTinggi() + "\t\n");
     }
 
     @Override
     public void hitungKeliling(String Bangun) {
-        this.setKeliling(( 2 * ( getAlas() + getMiring())));
+        this.setKeliling(( 2 * (Math.sqrt(Math.pow(0.5 * getAlas(), 2) + Math.pow(getTinggi(), 2))) + getAlas()));
         super.hitungKeliling(Bangun);
     }
-
     @Override
     public void hitungLuas(String Bangun) {
-        this.setLuas(( getAlas() * getTinggi()));
+        this.setLuas(( 0.5 * getAlas() * getTinggi()));
         super.hitungLuas(Bangun);
     }
 
     private double getAlas() {
-        return alas;
+        return Alas;
     }
 
     public void setAlas(double alas) {
-        this.alas = alas;
+        Alas = alas;
     }
 
     private double getTinggi() {
-        return tinggi;
+        return Tinggi;
     }
 
     public void setTinggi(double tinggi) {
-        this.tinggi = tinggi;
-    }
-
-    private double getMiring() {
-        return miring;
-    }
-
-    public void setMiring(double miring) {
-        this.miring = miring;
+        Tinggi = tinggi;
     }
 }

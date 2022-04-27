@@ -14,42 +14,47 @@
  * limitations under the License.
  */
 
-package id.xyzprjkt.Bangun3D;
+package id.xyzprjkt.LKVBangun.Bangun2D;
 
 import java.util.Objects;
 import java.util.Scanner;
 
-public class Bola extends id.xyzprjkt.LKVBangun.VBangun3D{
-    private double jarijari;
+public class Persegi extends id.xyzprjkt.LKVBangun.LKBangun2D {
+    private double Sisi;
 
     @Override
     public void inputData(String Data) {
-        if (Objects.equals(Data, "Jarijari")){
+        if (Objects.equals(Data, "Sisi")){
             super.inputData(Data);
             Scanner in = new Scanner(System.in);
-            setJarijari(in.nextDouble());
+            setSisi(in.nextDouble());
         } else {
             debugInput(Data);
         }
     }
 
     @Override
-    public void infoBangun(String bangunRuang, String p) {
-        super.infoBangun(bangunRuang);
-        System.out.print(p + " : " + getJarijari() + "\t\n");
+    public void infoBangun(String bangunDatar, String p) {
+        super.infoBangun(bangunDatar);
+        System.out.print(p + " : " + getSisi() + "\t\n");
     }
 
     @Override
-    public void hitungVolume(String Bangun) {
-        this.setVolume((4.0/3.0) * Math.PI * Math.pow(getJarijari(), 3));
-        super.hitungVolume(Bangun);
+    public void hitungKeliling(String Bangun) {
+        this.setKeliling(getSisi() * 4);
+        super.hitungKeliling(Bangun);
+    }
+    @Override
+    public void hitungLuas(String Bangun) {
+        this.setLuas(getSisi() * getSisi());
+        super.hitungLuas(Bangun);
     }
 
-    private double getJarijari() {
-        return jarijari;
+    private double getSisi() {
+        return Sisi;
     }
 
-    public void setJarijari(double jarijari) {
-        this.jarijari = jarijari;
+    public void setSisi(double sisi) {
+        Sisi = sisi;
     }
 }

@@ -14,47 +14,60 @@
  * limitations under the License.
  */
 
-package id.xyzprjkt.Bangun2D;
+package id.xyzprjkt.LKVBangun.Bangun2D;
 
 import java.util.Objects;
 import java.util.Scanner;
 
-public class Persegi extends id.xyzprjkt.LKVBangun.LKBangun2D {
-    private double Sisi;
+public class PersegiPanjang extends id.xyzprjkt.LKVBangun.LKBangun2D {
+    private double Panjang, Lebar;
 
     @Override
     public void inputData(String Data) {
-        if (Objects.equals(Data, "Sisi")){
+        if (Objects.equals(Data, "Panjang")){
             super.inputData(Data);
             Scanner in = new Scanner(System.in);
-            setSisi(in.nextDouble());
+            setPanjang(in.nextDouble());
+        } else if (Objects.equals(Data, "Lebar")){
+            super.inputData(Data);
+            Scanner in = new Scanner(System.in);
+            setLebar(in.nextDouble());
         } else {
             debugInput(Data);
         }
     }
 
     @Override
-    public void infoBangun(String bangunDatar, String p) {
+    public void infoBangun(String bangunDatar, String p, String p2) {
         super.infoBangun(bangunDatar);
-        System.out.print(p + " : " + getSisi() + "\t\n");
+        System.out.print(p + " : " + getPanjang() + "\t");
+        System.out.print(p2 + " : " + getLebar() + "\t\n");
     }
 
     @Override
     public void hitungKeliling(String Bangun) {
-        this.setKeliling(getSisi() * 4);
+        this.setKeliling(( getPanjang() * 2 ) + ( getLebar() * 2 ));
         super.hitungKeliling(Bangun);
     }
     @Override
     public void hitungLuas(String Bangun) {
-        this.setLuas(getSisi() * getSisi());
+        this.setLuas(getPanjang() * getLebar());
         super.hitungLuas(Bangun);
     }
 
-    private double getSisi() {
-        return Sisi;
+    private double getPanjang() {
+        return Panjang;
     }
 
-    public void setSisi(double sisi) {
-        Sisi = sisi;
+    public void setPanjang(double panjang) {
+        Panjang = panjang;
+    }
+
+    private double getLebar() {
+        return Lebar;
+    }
+
+    public void setLebar(double lebar) {
+        Lebar = lebar;
     }
 }

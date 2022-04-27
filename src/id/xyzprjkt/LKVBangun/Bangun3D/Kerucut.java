@@ -14,24 +14,20 @@
  * limitations under the License.
  */
 
-package id.xyzprjkt.Bangun3D;
+package id.xyzprjkt.LKVBangun.Bangun3D;
 
 import java.util.Objects;
 import java.util.Scanner;
 
-public class Balok extends id.xyzprjkt.LKVBangun.VBangun3D{
-    private double panjang, lebar, tinggi;
+public class Kerucut extends id.xyzprjkt.LKVBangun.VBangun3D{
+    private double jarijari, tinggi;
 
     @Override
     public void inputData(String Data) {
-        if (Objects.equals(Data, "Panjang")){
+        if (Objects.equals(Data, "JariJari")){
             super.inputData(Data);
             Scanner in = new Scanner(System.in);
-            setPanjang(in.nextDouble());
-        } else if (Objects.equals(Data, "Lebar")){
-            super.inputData(Data);
-            Scanner in = new Scanner(System.in);
-            setLebar(in.nextDouble());
+            setJarijari(in.nextDouble());
         } else if (Objects.equals(Data, "Tinggi")){
             super.inputData(Data);
             Scanner in = new Scanner(System.in);
@@ -42,33 +38,24 @@ public class Balok extends id.xyzprjkt.LKVBangun.VBangun3D{
     }
 
     @Override
-    public void infoBangun(String bangunRuang, String p, String p2, String p3) {
+    public void infoBangun(String bangunRuang, String p, String p2) {
         super.infoBangun(bangunRuang);
-        System.out.print(p + " : " + getPanjang() + "\t");
-        System.out.print(p2 + " : " + getLebar() + "\t");
-        System.out.print(p3 + " : " + getTinggi() + "\t\n");
+        System.out.print(p + " : " + getJarijari() + "\t");
+        System.out.print(p2 + " : " + getTinggi() + "\t\n");
     }
 
     @Override
     public void hitungVolume(String Bangun) {
-        this.setVolume(getPanjang() * getLebar() * getTinggi());
+        this.setVolume(( 1.0 / 3.0 ) * Math.PI * Math.pow(getJarijari(), 2) * getTinggi());
         super.hitungVolume(Bangun);
     }
 
-    private double getPanjang() {
-        return panjang;
+    private double getJarijari() {
+        return jarijari;
     }
 
-    public void setPanjang(double panjang) {
-        this.panjang = panjang;
-    }
-
-    private double getLebar() {
-        return lebar;
-    }
-
-    public void setLebar(double lebar) {
-        this.lebar = lebar;
+    public void setJarijari(double jarijari) {
+        this.jarijari = jarijari;
     }
 
     private double getTinggi() {
