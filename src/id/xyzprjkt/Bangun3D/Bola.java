@@ -34,6 +34,12 @@ public class Bola extends id.xyzprjkt.LKVBangun.VBangun3D{
     }
 
     @Override
+    public void infoBangun(String bangunRuang, String p) {
+        super.infoBangun(bangunRuang);
+        System.out.print(p + " : " + getJarijari() + "\t\n");
+    }
+
+    @Override
     public void hitungVolume(String Bangun) {
         this.setVolume((4.0/3.0) * Math.PI * Math.pow(getJarijari(), 3));
         super.hitungVolume(Bangun);

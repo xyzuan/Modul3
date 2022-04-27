@@ -34,6 +34,12 @@ public class Kubus extends id.xyzprjkt.LKVBangun.VBangun3D{
     }
 
     @Override
+    public void infoBangun(String bangunRuang, String p) {
+        super.infoBangun(bangunRuang);
+        System.out.print(p + " : " + getRusuk() + "\t\n");
+    }
+
+    @Override
     public void hitungVolume(String Bangun) {
         this.setVolume(getRusuk() * getRusuk() * getRusuk());
         super.hitungVolume(Bangun);

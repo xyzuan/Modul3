@@ -38,6 +38,13 @@ public class Kerucut extends id.xyzprjkt.LKVBangun.VBangun3D{
     }
 
     @Override
+    public void infoBangun(String bangunRuang, String p, String p2) {
+        super.infoBangun(bangunRuang);
+        System.out.print(p + " : " + getJarijari() + "\t");
+        System.out.print(p2 + " : " + getTinggi() + "\t\n");
+    }
+
+    @Override
     public void hitungVolume(String Bangun) {
         this.setVolume(( 1.0 / 3.0 ) * Math.PI * Math.pow(getJarijari(), 2) * getTinggi());
         super.hitungVolume(Bangun);

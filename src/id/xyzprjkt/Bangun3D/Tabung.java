@@ -38,6 +38,13 @@ public class Tabung extends id.xyzprjkt.LKVBangun.VBangun3D{
     }
 
     @Override
+    public void infoBangun(String bangunRuang, String p, String p2) {
+        super.infoBangun(bangunRuang);
+        System.out.print(p + " : " + getJarijari() + "\t");
+        System.out.print(p2 + " : " + getTinggi() + "\t\n");
+    }
+
+    @Override
     public void hitungVolume(String Bangun) {
         this.setVolume(Math.PI * getJarijari() * getJarijari() * getTinggi());
         super.hitungVolume(Bangun);

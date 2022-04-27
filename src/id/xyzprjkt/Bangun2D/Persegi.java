@@ -34,6 +34,12 @@ public class Persegi extends id.xyzprjkt.LKVBangun.LKBangun2D {
     }
 
     @Override
+    public void infoBangun(String bangunDatar, String p) {
+        super.infoBangun(bangunDatar);
+        System.out.print(p + " : " + getSisi() + "\t\n");
+    }
+
+    @Override
     public void hitungKeliling(String Bangun) {
         this.setKeliling(getSisi() * 4);
         super.hitungKeliling(Bangun);

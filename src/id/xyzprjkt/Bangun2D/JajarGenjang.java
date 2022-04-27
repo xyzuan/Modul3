@@ -42,6 +42,14 @@ public class JajarGenjang extends id.xyzprjkt.LKVBangun.LKBangun2D {
     }
 
     @Override
+    public void infoBangun(String bangunDatar, String p, String p2, String p3) {
+        super.infoBangun(bangunDatar);
+        System.out.print(p + " : " + getAlas() + "\t");
+        System.out.print(p2 + " : " + getTinggi() + "\t");
+        System.out.print(p3 + " : " + getMiring() + "\t\n");
+    }
+
+    @Override
     public void hitungKeliling(String Bangun) {
         this.setKeliling(( 2 * ( getAlas() + getMiring())));
         super.hitungKeliling(Bangun);

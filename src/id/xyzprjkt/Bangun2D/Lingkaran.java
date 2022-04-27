@@ -24,13 +24,19 @@ public class Lingkaran extends id.xyzprjkt.LKVBangun.LKBangun2D {
 
     @Override
     public void inputData(String Data) {
-        if (Objects.equals(Data, "Jarijari")){
+        if (Objects.equals(Data, "JariJari")){
             super.inputData(Data);
             Scanner in = new Scanner(System.in);
             setJarijari(in.nextDouble());
         } else {
             debugInput(Data);
         }
+    }
+
+    @Override
+    public void infoBangun(String bangunDatar, String p) {
+        super.infoBangun(bangunDatar);
+        System.out.print(p + " : " + getJarijari() + "\t\n");
     }
 
     @Override

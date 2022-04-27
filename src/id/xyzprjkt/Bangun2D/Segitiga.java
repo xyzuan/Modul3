@@ -38,6 +38,13 @@ public class Segitiga extends id.xyzprjkt.LKVBangun.LKBangun2D {
     }
 
     @Override
+    public void infoBangun(String bangunDatar, String p, String p2) {
+        super.infoBangun(bangunDatar);
+        System.out.print(p + " : " + getAlas() + "\t");
+        System.out.print(p2 + " : " + getTinggi() + "\t\n");
+    }
+
+    @Override
     public void hitungKeliling(String Bangun) {
         this.setKeliling(( 2 * (Math.sqrt(Math.pow(0.5 * getAlas(), 2) + Math.pow(getTinggi(), 2))) + getAlas()));
         super.hitungKeliling(Bangun);

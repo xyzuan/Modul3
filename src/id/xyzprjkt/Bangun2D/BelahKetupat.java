@@ -42,6 +42,14 @@ public class BelahKetupat extends id.xyzprjkt.LKVBangun.LKBangun2D{
     }
 
     @Override
+    public void infoBangun(String bangunDatar, String p, String p2, String p3) {
+        super.infoBangun(bangunDatar);
+        System.out.print(p + " : " + getSisi() + "\t");
+        System.out.print(p2 + " : " + getD1() + "\t");
+        System.out.print(p3 + " : " + getD2() + "\t\n");
+    }
+
+    @Override
     public void hitungKeliling(String Bangun) {
         this.setKeliling(( 4 * getSisi()));
         super.hitungKeliling(Bangun);

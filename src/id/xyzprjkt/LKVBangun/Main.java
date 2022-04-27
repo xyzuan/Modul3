@@ -39,10 +39,10 @@ public class Main {
     private void MainMenu(){
         Main obj = new Main();
         System.out.println("""
-                =========================================================
-                Selamat Datang di Aplikasi LKV
-                Menghitung Luas Keliling Volume Akan Menjadi Mudah
-                =========================================================""");
+            =========================================================
+            Selamat Datang di Aplikasi LKV
+            Menghitung Luas Keliling Volume Akan Menjadi Mudah
+            =========================================================""");
         System.out.println("1. Menghitung Bangun 2 Dimensi\n2. Menghitung Bangun 3 Dimensi\n0. Keluar");
         System.out.print("Pilih menu : ");
         pilihMenu = in.nextInt();
@@ -65,31 +65,37 @@ public class Main {
                 case 1 -> { isBangun = "Persegi";
                     Persegi psg = new Persegi();
                     psg.inputData("Sisi");
+                    psg.infoBangun(isBangun, "Sisi");
                     psg.hitungKeliling(isBangun); psg.hitungLuas(isBangun);
                 }
                 case 2 -> { isBangun = "Persegi Panjang";
                     PersegiPanjang psgp = new PersegiPanjang();
                     psgp.inputData("Panjang"); psgp.inputData("Lebar");
+                    psgp.infoBangun(isBangun, "Panjang", "Lebar");
                     psgp.hitungKeliling(isBangun); psgp.hitungLuas(isBangun);
                 }
                 case 3 -> { isBangun = "Segitiga";
                     Segitiga sgt = new Segitiga();
                     sgt.inputData("Alas"); sgt.inputData("Tinggi");
+                    sgt.infoBangun(isBangun, "Alas", "Tinggi");
                     sgt.hitungKeliling(isBangun); sgt.hitungLuas(isBangun);
                 }
                 case 4 -> { isBangun = "Lingkaran";
                     Lingkaran crcl = new Lingkaran();
-                    crcl.inputData("Jarijari");
+                    crcl.inputData("JariJari");
+                    crcl.infoBangun(isBangun, "JariJari");
                     crcl.hitungKeliling(isBangun); crcl.hitungLuas(isBangun);
                 }
                 case 5 -> { isBangun = "Jajar Genjang";
                     JajarGenjang jg = new JajarGenjang();
                     jg.inputData("Alas"); jg.inputData("Tinggi"); jg.inputData("Sisi Miring");
+                    jg.infoBangun(isBangun, "Alas", "Tinggi", "Sisi Miring");
                     jg.hitungKeliling(isBangun); jg.hitungLuas(isBangun);
                 }
                 case 6 -> { isBangun = "Belah Ketupat";
                     BelahKetupat bk = new BelahKetupat();
                     bk.inputData("Sisi"); bk.inputData("Diagonal-1"); bk.inputData("Diagonal-2");
+                    bk.infoBangun(isBangun, "Sisi", "Diagonal-1", "Diagonal-2");
                     bk.hitungKeliling(isBangun); bk.hitungLuas(isBangun);
                 }
                 case 0 -> MainMenu();
@@ -109,26 +115,31 @@ public class Main {
                 case 1 -> { isBangun = "Kubus";
                     Kubus cube = new Kubus();
                     cube.inputData("Rusuk");
+                    cube.infoBangun(isBangun, "Rusuk");
                     cube.hitungVolume(isBangun);
                 }
                 case 2 -> { isBangun = "Balok";
                     Balok blk = new Balok();
                     blk.inputData("Panjang"); blk.inputData("Lebar"); blk.inputData("Tinggi");
+                    blk.infoBangun(isBangun, "Panjang", "Lebar", "Tinggi");
                     blk.hitungVolume(isBangun);
                 }
                 case 3 -> { isBangun = "Tabung";
                     Tabung tb = new Tabung();
                     tb.inputData("JariJari"); tb.inputData("Tinggi");
+                    tb.infoBangun(isBangun, "JariJari", "Tinggi");
                     tb.hitungVolume(isBangun);
                 }
                 case 4 -> { isBangun = "Bola";
                     Bola ball = new Bola();
                     ball.inputData("JariJari");
+                    ball.infoBangun(isBangun, "JariJari");
                     ball.hitungVolume(isBangun);
                 }
                 case 5 -> { isBangun = "Kerucut";
                     Kerucut kr = new Kerucut();
                     kr.inputData("JariJari"); kr.inputData("Tinggi");
+                    kr.infoBangun(isBangun, "JariJari", "Tinggi");
                     kr.hitungVolume(isBangun);
                 }
                 case 0 -> MainMenu();

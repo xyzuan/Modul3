@@ -48,6 +48,35 @@ public class LKBangun2D {
         }
     }
 
+    protected void infoBangun(String bangunDatar){
+        System.out.println("______________________________________________________");
+        System.out.println("Hasil Bangun " + bangunDatar);
+    }
+
+    protected void infoBangun(String bangunDatar, String p){
+        System.out.println("______________________________________________________");
+        System.out.println("Hasil Bangun " + bangunDatar);
+        // Dummy for bangunDatar information
+        System.out.print(p + " : " /* + bangunAttribute */ + "\t\n");
+    }
+
+    protected void infoBangun(String bangunDatar, String p, String p2){
+        System.out.println("______________________________________________________");
+        System.out.println("Hasil Bangun " + bangunDatar);
+        // Dummy for bangunDatar information
+        System.out.print(p + " : " /* + bangunAttribute */ + "\t");
+        System.out.print(p2 + " : " /* + bangunAttribute */ + "\t\n");
+    }
+
+    protected void infoBangun(String bangunDatar, String p, String p2, String p3){
+        System.out.println("______________________________________________________");
+        System.out.println("Hasil Bangun " + bangunDatar);
+        // Dummy for bangunDatar information
+        System.out.print(p + " : " /* + bangunAttribute */ + "\t");
+        System.out.print(p2 + " : " /* + bangunAttribute */ + "\t");
+        System.out.print(p3 + " : " /* + bangunAttribute */ + "\t\n");
+    }
+
     protected void debugInput(String params){
         Main obj = new Main();
         if(obj.isDebug) {

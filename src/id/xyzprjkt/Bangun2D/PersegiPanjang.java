@@ -38,6 +38,13 @@ public class PersegiPanjang extends id.xyzprjkt.LKVBangun.LKBangun2D {
     }
 
     @Override
+    public void infoBangun(String bangunDatar, String p, String p2) {
+        super.infoBangun(bangunDatar);
+        System.out.print(p + " : " + getPanjang() + "\t");
+        System.out.print(p2 + " : " + getLebar() + "\t\n");
+    }
+
+    @Override
     public void hitungKeliling(String Bangun) {
         this.setKeliling(( getPanjang() * 2 ) + ( getLebar() * 2 ));
         super.hitungKeliling(Bangun);
